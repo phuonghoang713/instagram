@@ -4,7 +4,9 @@ class PostsController < ApplicationController
     redirect_to root_path
   end
 
-  def show
+  def new
+    @post = Post.new
+    # @current_user = User.find(params[:id])
   end
 
   private
