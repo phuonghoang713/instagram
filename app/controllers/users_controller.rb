@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :current_user, only: [:show, :update, :edit, :detroy]
 
   def show
+    @posts = current_user.posts.order(created_at: :desc)
   end
 
   def edit
