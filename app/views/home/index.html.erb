@@ -1,5 +1,5 @@
 <div class="user-tabs">
-  <a class="tab active" href="<%=new_post_path%>">
+  <a class="tab active" href="">
     <i class="fa fa-th"></i>
     POSTS
   </a>
@@ -15,6 +15,10 @@
     <i class="fa fa-tag"></i>
     TAGGED
   </a>
+  <a class="tab" href="<%=new_post_path%>">
+    <i class="fa fa-plus"></i>
+    NEW POST
+  </a>
 </div>
 <div class="posts">
   <% @posts.each do |post| %>
@@ -27,7 +31,9 @@
           <%= post.user.username %>
         </div>
       </div>
-      <%= image_tag post.image, class: 'main-image' %>
+      <div class: "main-image">
+        <%= image_tag post.image %>
+      </div>
       <div class="description">
         <%= post.description %>
       </div>
