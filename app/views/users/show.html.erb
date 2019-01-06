@@ -24,3 +24,43 @@
     </div>
   </div>
 </div>
+<div class="user-tabs">
+  <a class="tab active" href="">
+    <i class="fa fa-th"></i>
+    POSTS
+  </a>
+  <a class="tab" href="">
+    <i class="fa fa-tv"></i>
+    IGTV
+  </a>
+  <a class="tab" href="">
+    <i class="fa fa-bookmark"></i>
+    SAVED
+  </a>
+  <a class="tab" href="">
+    <i class="fa fa-tag"></i>
+    TAGGED
+  </a>
+  <a class="tab" href="<%=new_post_path%>">
+    <i class="fa fa-plus"></i>
+    NEW POST
+  </a>
+</div>
+<div class="posts">
+  <% @posts.each do |post| %>
+    <section class="post">
+      <div class="user">
+        <div class="avatar">
+          <img src="user_avatar.jpg">
+        </div>
+        <div class="username">
+          <%= post.user.username %>
+        </div>
+      </div>
+      <%= image_tag post.image, class: 'main-image' %>
+      <div class="description">
+        <%= post.description %>
+      </div>
+    </section>
+  <% end %>
+</div>
