@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "users";
+@import "posts";
 .container{
   max-width: 1000px;
 }
@@ -36,6 +37,21 @@
   p{
     color: #999;
   }
+}
+
+// .form-upload{
+//   border: 1px solid #dbdbdb;
+//   height: auto;
+//   margin: auto 160px;
+//   padding: 30px;
+//   border-radius: 3px;
+//   input[type='text']{
+//     width: 100%;
+//   }
+// }
+/* .posts{
+  margin: 50px 180px 10px;
+  border: 100px solid #7e2323;
 }
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

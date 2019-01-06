@@ -31,9 +31,7 @@
           <%= post.user.username %>
         </div>
       </div>
-      <div class: "main-image">
-        <%= image_tag post.image %>
-      </div>
+      <%= image_tag post.image, class: 'main-image' %>
       <div class="description">
         <%= post.description %>
       </div>
