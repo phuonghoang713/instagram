@@ -26,6 +26,7 @@ gem 'jquery-rails'
 gem 'font-awesome-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'devise'
+gem 'kaminari'
 gem 'io-like', '~> 0.3.0'
 gem 'archive-zip', '~> 0.11.0'
 # Use Redis adapter to run Action Cable in production

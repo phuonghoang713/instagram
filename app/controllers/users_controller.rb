@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :current_user, only: [:show, :update, :edit, :detroy]
 
   def show
-    @posts = current_user.posts.order(created_at: :desc)
+    @posts = current_user.posts.order(created_at: :desc).page(params[:page]).per(5)
   end
 
   def edit
@@ -22,6 +22,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:username, :name, :website,
-                                 :bio, :email, :phone, :gender)
+                                 :bio, :email, :phone, :gender, :avatar)
   end
 end
